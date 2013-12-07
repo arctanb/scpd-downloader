@@ -20,7 +20,7 @@ function 'openVideoWindow' gets invoked, a function which assigns
 'WMPObject.URL' the very URL we're looking to download. Chrome's inspector
 allows you to modify this function; I suggest the following modification:
 
-'''
+```
 urls = []
 function openVideoWindow(...) {
   ...
@@ -28,5 +28,5 @@ function openVideoWindow(...) {
   urls.push(WMPObject.URL)
   ...
 }
-'''
+```
 
