@@ -4,7 +4,7 @@ scpd-downloader
 Usage: python download.py [file]
 
 The file should contain a list, consisting of one url per line, of resource
-urls, each looking like 'mms://.../[filename].wmv'.
+urls, each looking like `mms://.../[filename].wmv`.
 
 The download script will download the files to the current folder with a
 consistent naming convention based on class name and lecture date.
@@ -30,3 +30,5 @@ function openVideoWindow(...) {
 }
 ```
 
+Now, clicking all the lecture links sequentially will populate `urls` with the
+desired urls to download.
