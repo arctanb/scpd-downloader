@@ -13,8 +13,8 @@ with open(sys.argv[1]) as fin:
 
 for url in lines:
   spl = url.split('/')
-  fname = '"%s-%s.wmv"' % (spl[4], spl[6].split('-')[0])
-  os.system('mimms -c %s tmp' % url)
+  fname = spl[-1]
+  os.system('wget -O tmp %s' % url)
   os.system('mv tmp %s' % fname)
 
 print 'done'
