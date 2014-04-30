@@ -11,6 +11,9 @@ function doThing() {
   for (var i in results) {
     results[i] = results[i].substr("mp4-url&quot;:&quot;".length);
     results[i] = results[i].substr(0, results[i].length - "&quot;,&quot;".length);
+    if (results[i].indexOf("ps-") >= 0) {
+      continue;
+    }
     out = out + results[i] + "\r";
   }
   $('#text').val(out);
