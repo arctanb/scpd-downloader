@@ -14,6 +14,9 @@ function doThing() {
     if (results[i].indexOf("ps-") >= 0) {
       continue;
     }
+    if ($('#p720').prop('checked') && results[i].indexOf("720") < 0) {
+      continue;
+    }
     out = out + results[i] + "\r";
   }
   $('#text').val(out);
@@ -23,7 +26,7 @@ function doThing() {
 <body>
 
 <textarea id="text" style="width:100%; height:50%"></textarea>
-
+<input id="p720" type="checkbox">720p only</input><br/>
 <input type="button" value="bla" onClick="doThing()" />
 
 </body>
